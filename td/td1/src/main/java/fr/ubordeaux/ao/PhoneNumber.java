@@ -15,9 +15,9 @@ public class PhoneNumber {
 
     @Override
     public boolean equals(Object other) {
-        if (! (other instanceof PhoneNumber)) return false;
+        if (!(other instanceof PhoneNumber)) return false;
         PhoneNumber otherPhoneNumber = (PhoneNumber) other;
-        return  number == otherPhoneNumber.getPhoneNumber();
+        return number == otherPhoneNumber.getPhoneNumber();
     }
 
     @Override
@@ -27,6 +27,6 @@ public class PhoneNumber {
 
     @Override
     public String toString() {
-        return ""+number;
+        return "" + number;
     }
 }

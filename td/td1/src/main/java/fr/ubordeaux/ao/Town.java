@@ -21,11 +21,11 @@ public class Town {
 
     @Override
     public boolean equals(Object other) {
-        if (! (other instanceof Town)) return false;
+        if (!(other instanceof Town)) return false;
         Town otherTown = (Town) other;
         boolean sameTown = this.name.compareTo(otherTown.name) == 0;
         boolean sameZipcode = this.zipcode == otherTown.zipcode;
-        return  sameTown && sameZipcode;
+        return sameTown && sameZipcode;
     }
 
     @Override
@@ -35,6 +35,6 @@ public class Town {
 
     @Override
     public String toString() {
-        return zipcode+" "+name;
+        return zipcode + " " + name;
     }
 }

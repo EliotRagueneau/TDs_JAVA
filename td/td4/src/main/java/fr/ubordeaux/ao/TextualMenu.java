@@ -12,7 +12,7 @@ public class TextualMenu {
     private PrintWriter out;
     private Catalog catalog;
 
-    protected TextualMenu(BufferedReader in , PrintWriter out) {
+    protected TextualMenu(BufferedReader in, PrintWriter out) {
         this.in = in;
         this.out = out;
         initCollection();
@@ -25,7 +25,7 @@ public class TextualMenu {
     }
 
     private void initCollection() {
-        catalog = new CatalogImpl();
+        catalog = new CatalogImpl("collection");
     }
 
     protected void handleUserInstructions() throws IOException {
@@ -35,10 +35,12 @@ public class TextualMenu {
             out.println("Your choice 1-2:");
             String choice = in.readLine();
             switch (choice) {
-                case "1" : createReferenceAndAddItToCatalog();
-                            break;
-                case "2" : end = true;
-                default : 
+                case "1":
+                    createReferenceAndAddItToCatalog();
+                    break;
+                case "2":
+                    end = true;
+                default:
             }
         }
     }
@@ -57,7 +59,7 @@ public class TextualMenu {
         Reference reference = new Reference(refId, refName, refDescription, refPrice);
 
         catalog.addReference(reference);
-        out.println("Reference ("+refId+") has been created and added to the catalog !");
+        out.println("Reference (" + refId + ") has been created and added to the catalog !");
     }
 
 }

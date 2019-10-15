@@ -15,9 +15,9 @@ public class Mail {
 
     @Override
     public boolean equals(Object other) {
-        if (! (other instanceof Mail)) return false;
+        if (!(other instanceof Mail)) return false;
         Mail otherMail = (Mail) other;
-        return  this.mail.compareTo(otherMail.getMail())==0;
+        return this.mail.compareTo(otherMail.getMail()) == 0;
     }
 
     @Override
@@ -27,7 +27,7 @@ public class Mail {
 
     @Override
     public String toString() {
-        return "mails: "+mail;
+        return "mails: " + mail;
     }
 
 }

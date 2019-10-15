@@ -5,7 +5,7 @@ import java.util.Objects;
 import java.util.Set;
 
 public class Contact {
-    private static int nextId=1;
+    private static int nextId = 1;
     private int id;
     private String firstName;
     private String secondName;
@@ -52,8 +52,7 @@ public class Contact {
     }
 
     public Set<Mail> getMails() {
-        Set<Mail> mailz = new HashSet<Mail>();
-        mailz.addAll(mails);
+        Set<Mail> mailz = new HashSet<Mail>(mails);
         return mailz;
     }
 
@@ -73,9 +72,9 @@ public class Contact {
 
     @Override
     public boolean equals(Object other) {
-        if (! (other instanceof Contact)) return false;
+        if (!(other instanceof Contact)) return false;
         Contact otherContact = (Contact) other;
-        return  this.id == otherContact.id();
+        return this.id == otherContact.id();
     }
 
     @Override
@@ -85,6 +84,6 @@ public class Contact {
 
     @Override
     public String toString() {
-        return "contact "+id;
+        return "contact " + id;
     }
 }

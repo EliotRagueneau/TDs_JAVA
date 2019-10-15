@@ -27,12 +27,12 @@ public class Address {
 
     @Override
     public boolean equals(Object other) {
-        if (! (other instanceof Address)) return false;
+        if (!(other instanceof Address)) return false;
         Address otherAddress = (Address) other;
         boolean sameNumber = this.number == otherAddress.getNumber();
         boolean sameStreet = this.street.compareTo(otherAddress.getStreet()) == 0;
         boolean sameTown = this.town.equals(otherAddress.getTown());
-        return  sameNumber && sameStreet && sameTown;
+        return sameNumber && sameStreet && sameTown;
     }
 
     @Override
@@ -42,7 +42,7 @@ public class Address {
 
     @Override
     public String toString() {
-        return number+" "+street+" "+town.toString();
+        return number + " " + street + " " + town.toString();
     }
 
 }
